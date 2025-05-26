@@ -1,12 +1,14 @@
 import { Text, View, StyleSheet } from 'react-native';
 import { multiply } from 'react-native-typst-turbo-module';
 
-const result = multiply(3, 7);
+console.log('here 2');
+
+const result = multiply(3, 6);
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Text style={styles.text}>Result: {result}</Text>
     </View>
   );
 }
@@ -16,5 +18,8 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  text: {
+    color: 'white',
   },
 });
