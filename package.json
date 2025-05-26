@@ -32,6 +32,10 @@
     "!**/.*"
   ],
   "scripts": {
+    "ubrn:ios": "ubrn build ios     --config ubrn.config.yaml --and-generate && (cd example/ios && pod install)",
+    "ubrn:android": "ubrn build android --config ubrn.config.yaml --and-generate",
+    "ubrn:checkout": "ubrn checkout      --config ubrn.config.yaml",
+    "ubrn:clean": "rm -Rf cpp/ android/src/main/java ios/ src/Native* src/generated/ src/index.ts*",
     "example": "yarn workspace react-native-typst-turbo-module-example",
     "test": "jest",
     "typecheck": "tsc",
@@ -160,5 +164,8 @@
     "languages": "kotlin-objc",
     "type": "turbo-module",
     "version": "0.50.3"
+  },
+  "dependencies": {
+    "uniffi-bindgen-react-native": "^0.28.3-5"
   }
 }
